@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/1ibs/font-awesome/5.15.2/css/a11.min.css">
+<div class="container">
+    <div class="wrapper">
+        <div class="title"><span>signup Form</span></div>
+        <form [formGroup]="registerForm" (ngSubmit)="postUser(registerForm.value)">
+            <div class="row">
+                <i class="fas fa-user"></i>
+                <input type="text" formControlName="userName" placeholder="userName" required />
+            </div>
+            <div class="row">
+                <i class="fa fa-envelope"></i>
+                <input type="text" formControlName="email" placeholder="Email" required />
+            </div>
+            <div class="row">
+                <i class="fas fa-lock"></i>
+                <input type="password" formControlName="password" placeholder="password" required />
+            </div>
+            <!-- <div class="pass"><a href="#">Forgot passwordP</ax</div> -->
+            <div class="row button">
+                <input type="submit" value="Sign Up" />
+            </div>
+            <div class="signup-link">Allready a member? <a routerLink="/login">Sign In now</a></div>
+        </form>
+    </div>
+</div>
